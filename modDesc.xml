@@ -1,19 +1,21 @@
-﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <modDesc descVersion="21">
-    <author>Slivicon</author>
-    <version>1.0</version>
-	<annotation>Free to use, modify and share anywhere, with no permission required</annotation>
-	<title>
-		<en>Showtime 15</en>
-		<de>Showtime 15</de>
-	</title>
-	<description>
-		<en>Displays the real time below the game time</en>
-		<de>Zeigt die Echtzeit unterhalb der Spielzeit</de>
-	</description>
-	<iconFilename>store.dds</iconFilename>
-	<multiplayer supported="true"/>
-	<extraSourceFiles>
-		<sourceFile filename="showtime.lua" />
-	</extraSourceFiles>
+  <author>Slivicon</author>
+  <version>2.0</version>
+  <annotation>Free to use, modify and share anywhere, with no permission required</annotation>
+  <title>
+    <en>Showtime 15</en>
+    <de>Showtime 15</de>
+    <fr>Showtime 15</fr>
+  </title>
+  <description>
+    <en>Displays the real time below the game time</en>
+    <de>Zeigt die Echtzeit unterhalb der Spielzeit</de>
+    <fr>Affiche l'heure réelle ci-dessous l'heure de jeu</fr>
+  </description>
+  <iconFilename>store.dds</iconFilename>
+  <multiplayer supported="true" />
+  <extraSourceFiles>
+    <sourceFile filename="showtime.lua" />
+  </extraSourceFiles>
 </modDesc>
