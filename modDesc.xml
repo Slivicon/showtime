@@ -9,9 +9,9 @@
     <fr>Showtime 15</fr>
   </title>
   <description>
-    <en>Displays the real time below the game time</en>
-    <de>Zeigt die Echtzeit unterhalb der Spielzeit</de>
-    <fr>Affiche l'heure réelle ci-dessous l'heure de jeu</fr>
+    <en>Displays the real time</en>
+    <de>Zeigt die Echtzeit</de>
+    <fr>Affiche l'heure réelle</fr>
   </description>
   <iconFilename>store.dds</iconFilename>
   <multiplayer supported="true" />
