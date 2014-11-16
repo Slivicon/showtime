@@ -11,7 +11,7 @@ When first loaded, showtime will write a file called "showtime.xml" to the mods 
 
 The following properties are configurable:
 
-***white***
+***white***  
 The default is false (black text), but can be set to true (white text). White text will not show up in the default position, since the clock background is also white.
 
 ***fontSize***  
