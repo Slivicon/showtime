@@ -34,4 +34,4 @@ Notes
 * If any of the properties are missing, the entire xml configuration will be ignored.
 * Invalid properties are ignored.
 * To revert to the default settings, simply rename or delete the "showtime.xml" file from the mods folder (a new one will be generated at next load).
-
+* An example of showing the time below the mini-map in white would be to update "showtime.xml" with ***white="true"***, ***posDynamic="false"***, ***posX="0.045"*** and ***posY="0.007"***
