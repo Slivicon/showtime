@@ -136,19 +136,6 @@ function showtime.getTimeFormat24(timeFormat24)
   return false;
 end
 
-function showtime.isValidConfig(fXml, tag)
-  if fXml == nil then
-    return false;
-  end;
-  local configItems = {fontSize = fontSize, posDynamic = posDynamic, posX = posX, posY = posY, timeFormat24 = timeFormat24, showSeconds = showSeconds}
-  for k, v in pairs(configItems) do
-    if not hasXmlProperty(fXml, tag .. "#" .. k) then
-	  return false;
-	end;
-  end;
-  return true;
-end;
-
 function showtime.isValidFloat(num)
   e = tonumber(num);
   if e == nil then
@@ -161,16 +148,13 @@ function showtime.isValidFloat(num)
 end
 
 function showtime.readConfig(fXmlName, tag)
-  local fXml = loadXMLFile(tag, fXmlName, tag);
-  if not showtime.isValidConfig(fXml, tag) then
-    return;
-  end
-  local fontSize = getXMLFloat(fXml, tag .. "#fontSize");
-  local posDynamic = getXMLBool(fXml, tag .. "#posDynamic");
-  local posX = getXMLFloat(fXml, tag .. "#posX");
-  local posY = getXMLFloat(fXml, tag .. "#posY");
-  local timeFormat24 = getXMLBool(fXml, tag .. "#timeFormat24");
-  local showSeconds = getXMLBool(fXml, tag .. "#showSeconds");
+  local fXml = loadXMLFile("fXml", fXmlName);
+  local fontSize = Utils.getNoNil(getXMLFloat(fXml, tag .. "#fontSize"), showtime.getDefaultFontSize());
+  local posDynamic = Utils.getNoNil(getXMLBool(fXml, tag .. "#posDynamic"), showtime.getDefaultPosDynamic());
+  local posX = Utils.getNoNil(getXMLFloat(fXml, tag .. "#posX"), showtime.getDefaultPosX);
+  local posY = Utils.getNoNil(getXMLFloat(fXml, tag .. "#posY"), showtime.getDefaultPosY(fontSize));
+  local timeFormat24 = Utils.getNoNil(getXMLBool(fXml, tag .. "#timeFormat24"), showtime.getDefaultTimeFormat24());
+  local showSeconds = Utils.getNoNil(getXMLBool(fXml, tag .. "#showSeconds"), showtime.getDefaultShowSeconds());
   showtime.setParams(fontSize, posDynamic, posX, posY, timeFormat24, showSeconds);
   delete(fXml);
 end
